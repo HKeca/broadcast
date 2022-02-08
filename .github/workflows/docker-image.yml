@@ -38,7 +38,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v3
         with:
-          images: hkeca/project-starter
+          images: ${{ secrets.DOCKERHUB_REPO }}
           flavor: |
             latest=${{ github.ref == 'refs/heads/main' }}
       
