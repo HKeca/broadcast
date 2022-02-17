@@ -8,7 +8,7 @@
     "start": "ts-node ./src/server.ts",
     "watch": "webpack --config=webpack/dev.js --progress -w",
     "build": "webpack --config=webpack/dev.js --progress",
-    "lint:js": "eslint --ext .ts src/"
+    "lint:js": "eslint --ext .ts,.tsx src/"
   },
   "keywords": [],
   "author": "",
@@ -19,6 +19,7 @@
     "@typescript-eslint/eslint-plugin": "^5.10.2",
     "@typescript-eslint/parser": "^5.10.2",
     "eslint": "^8.8.0",
+    "eslint-plugin-react": "^7.28.0",
     "html-webpack-plugin": "^5.5.0",
     "jest": "^27.4.7",
     "ts-jest": "^27.1.3",
