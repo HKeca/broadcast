@@ -25,6 +25,9 @@ jobs:
       - name: Run JavaScript Linting
         run: npm run lint:js
 
+      - name: Run SCSS Linting
+        run: npm run lint:css
+
       - name: Run JavaScript tests
         run: npm test
 
