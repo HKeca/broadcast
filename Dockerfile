@@ -1,7 +1,5 @@
-FROM node:latest
+FROM nginx
 
-WORKDIR /app
+COPY ./dist/ /usr/share/nginx/html
 
-COPY ./dist/ /app
-
-CMD ["node", "bundle.js"]
+COPY ./deploy/default.conf /etc/nginx/conf.d/default.conf
