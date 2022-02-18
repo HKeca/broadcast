@@ -8,7 +8,8 @@
     "start": "ts-node ./src/server/server.ts",
     "watch": "webpack --config=webpack/dev.js --progress -w",
     "build": "webpack --config=webpack/dev.js --progress",
-    "lint:js": "eslint --ext .ts,.tsx src/"
+    "lint:js": "eslint --ext .ts,.tsx src/",
+    "lint:css": "stylelint src/scss/*.scss"
   },
   "keywords": [],
   "author": "",
@@ -26,6 +27,9 @@
     "mini-css-extract-plugin": "^2.5.3",
     "sass": "^1.49.8",
     "sass-loader": "^12.6.0",
+    "stylelint": "^14.5.1",
+    "stylelint-config-recommended-scss": "^5.0.2",
+    "stylelint-config-standard": "^25.0.0",
     "ts-jest": "^27.1.3",
     "ts-loader": "^9.2.6",
     "ts-node": "^10.5.0",
