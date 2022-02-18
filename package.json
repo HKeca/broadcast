@@ -5,7 +5,7 @@
   "main": "./src/server.ts",
   "scripts": {
     "test": "jest",
-    "start": "ts-node ./src/server.ts",
+    "start": "ts-node ./src/server/server.ts",
     "watch": "webpack --config=webpack/dev.js --progress -w",
     "build": "webpack --config=webpack/dev.js --progress",
     "lint:js": "eslint --ext .ts,.tsx src/"
@@ -37,8 +37,10 @@
   "dependencies": {
     "@types/react": "^17.0.39",
     "@types/react-dom": "^17.0.11",
+    "dotenv": "^16.0.0",
     "express": "^4.17.2",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "rollbar": "^2.24.0"
   }
 }
