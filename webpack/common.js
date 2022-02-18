@@ -1,7 +1,12 @@
 const path = require('path');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const dartSass = require('sass');
 
 exports.common = {
-  entry: './src/app.tsx',
+  entry: {
+    main: './src/app.tsx',
+    styles: './src/scss/base.scss',
+  },
   resolve: {
     extensions: [ '.ts', '.js', '.tsx' ],
   },
@@ -12,10 +17,27 @@ exports.common = {
         use: 'ts-loader',
         exclude: /node_modules/,
       },
+      {
+        test: /\.scss$/,
+        use: [
+          MiniCssExtractPlugin.loader,
+          'css-loader',
+          {
+            loader: 'sass-loader',
+            options: {
+              sourceMap: true,
+              implementation: dartSass,
+            },
+          },
+        ],
+      },
     ],
   },
   output: {
-    filename: 'bundle.js',
-    path: path.resolve(__dirname, '..', 'dist')
+    filename: '[name].js',
+    path: path.resolve(__dirname, '..', 'dist'),
   },
+  plugins: [
+    new MiniCssExtractPlugin(),
+  ],
 };
