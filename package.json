@@ -9,7 +9,8 @@
     "watch": "webpack --config=webpack/dev.js --progress -w",
     "build": "webpack --config=webpack/dev.js --progress",
     "lint:js": "eslint --ext .ts,.tsx src/",
-    "lint:css": "stylelint src/scss/*.scss"
+    "lint:css": "stylelint src/scss/*.scss",
+    "lint": "run-p lint:js lint:css"
   },
   "keywords": [],
   "author": "",
@@ -25,6 +26,7 @@
     "html-webpack-plugin": "^5.5.0",
     "jest": "^27.4.7",
     "mini-css-extract-plugin": "^2.5.3",
+    "npm-run-all": "^4.1.5",
     "sass": "^1.49.8",
     "sass-loader": "^12.6.0",
     "stylelint": "^14.5.1",
